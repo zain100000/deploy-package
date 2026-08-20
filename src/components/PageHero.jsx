@@ -23,9 +23,9 @@ export default function PageHero({ eyebrow, title, intro, crumbs = [], art = nul
                 {c.to ? (
                   <Link to={c.to} className="hover:text-sky transition-colors">{c.label}</Link>
                 ) : (
-                  <span className="text-white/70">{c.label}</span>
+                  <span className="text-fg/70">{c.label}</span>
                 )}
-                {i < crumbs.length - 1 && <span className="text-white/20">/</span>}
+                {i < crumbs.length - 1 && <span className="text-fg/20">/</span>}
               </span>
             ))}
           </motion.nav>

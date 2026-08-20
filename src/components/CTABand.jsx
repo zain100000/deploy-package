@@ -23,7 +23,7 @@ export default function CTABand({
               </Link>
               <a
                 href="tel:+97145773461"
-                className="px-7 py-3.5 rounded-full border hairline text-white hover:border-sky hover:text-sky transition-colors"
+                className="px-7 py-3.5 rounded-full border hairline text-fg hover:border-sky hover:text-sky transition-colors"
               >
                 Call Us
               </a>

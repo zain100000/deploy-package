@@ -55,7 +55,7 @@ export default function Services() {
         <div className="mt-12 flex justify-center">
           <Link
             to="/services"
-            className="px-7 py-3.5 rounded-full border hairline text-white hover:border-sky hover:text-sky transition-colors"
+            className="px-7 py-3.5 rounded-full border hairline text-fg hover:border-sky hover:text-sky transition-colors"
           >
             View all services
           </Link>

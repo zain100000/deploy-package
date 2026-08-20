@@ -57,7 +57,7 @@ export default function ServiceDetail() {
                     <span className="font-mono text-xs text-sky/70 pt-1">
                       {String(i + 1).padStart(2, '0')}
                     </span>
-                    <span className="text-sm text-white/85 leading-relaxed">{item}</span>
+                    <span className="text-sm text-fg/85 leading-relaxed">{item}</span>
                   </li>
                 </Reveal>
               ))}

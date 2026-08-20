@@ -24,7 +24,7 @@ export default function ProcessPage() {
 
       <section ref={ref} className="max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-28">
         <div className="relative">
-          <div className="hidden md:block absolute left-[19px] top-2 bottom-2 w-px bg-white/10">
+          <div className="hidden md:block absolute left-[19px] top-2 bottom-2 w-px bg-fg/10">
             <motion.div style={{ scaleY: lineScale }} className="w-full h-full bg-sky origin-top" />
           </div>
 
@@ -42,7 +42,7 @@ export default function ProcessPage() {
                   </div>
                   <div className="md:col-span-9 md:pl-4">
                     <Icon step={i} className="step-visual block" boxed={false} />
-                    <p className="text-lg text-white/85 leading-relaxed">{step.desc}</p>
+                    <p className="text-lg text-fg/85 leading-relaxed">{step.desc}</p>
                     <p className="mt-4 text-muted leading-relaxed">{step.detail}</p>
                   </div>
                 </div>

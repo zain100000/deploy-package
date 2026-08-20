@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import logo from '../assets/logo.png'
+import { useTheme } from '../hooks'
 
 const links = [
   { label: 'About', to: '/about' },
@@ -10,10 +11,32 @@ const links = [
   { label: 'Why Us', to: '/why-us' },
 ]
 
+function ThemeToggle({ theme, onToggle, className = '' }) {
+  return (
+    <button
+      onClick={onToggle}
+      aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+      className={`w-9 h-9 rounded-full border hairline grid place-items-center text-muted hover:text-sky hover:border-sky/50 transition-colors ${className}`}
+    >
+      {theme === 'dark' ? (
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+        </svg>
+      ) : (
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+      )}
+    </button>
+  )
+}
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const { pathname } = useLocation()
+  const [theme, toggleTheme] = useTheme()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
@@ -46,7 +69,7 @@ export default function Navbar() {
               to={l.to}
               className={({ isActive }) =>
                 `text-sm transition-colors duration-200 ${
-                  isActive ? 'text-sky' : 'text-muted hover:text-white'
+                  isActive ? 'text-sky' : 'text-muted hover:text-fg'
                 }`
               }
             >
@@ -59,17 +82,21 @@ export default function Navbar() {
           >
             Get a Quote
           </Link>
+          <ThemeToggle theme={theme} onToggle={toggleTheme} />
         </nav>
 
-        <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-          aria-expanded={open}
-        >
-          <span className={`w-6 h-px bg-white transition-transform ${open ? 'rotate-45 translate-y-[3.5px]' : ''}`} />
-          <span className={`w-6 h-px bg-white transition-transform ${open ? '-rotate-45 -translate-y-[3px]' : ''}`} />
-        </button>
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeToggle theme={theme} onToggle={toggleTheme} />
+          <button
+            className="flex flex-col gap-1.5 p-2"
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle menu"
+            aria-expanded={open}
+          >
+            <span className={`w-6 h-px bg-fg transition-transform ${open ? 'rotate-45 translate-y-[3.5px]' : ''}`} />
+            <span className={`w-6 h-px bg-fg transition-transform ${open ? '-rotate-45 -translate-y-[3px]' : ''}`} />
+          </button>
+        </div>
       </div>
 
       <AnimatePresence>
@@ -86,7 +113,7 @@ export default function Navbar() {
                 <NavLink
                   key={l.to}
                   to={l.to}
-                  className={({ isActive }) => `text-lg ${isActive ? 'text-sky' : 'text-white'}`}
+                  className={({ isActive }) => `text-lg ${isActive ? 'text-sky' : 'text-fg'}`}
                 >
                   {l.label}
                 </NavLink>

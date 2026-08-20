@@ -24,20 +24,25 @@ export default function Process() {
         </Reveal>
 
         <div ref={ref} className="relative mt-16 grid md:grid-cols-4 gap-10">
-          {/* progress line */}
+          {/* progress line: horizontal on desktop, vertical through the circles on mobile */}
           <div className="hidden md:block absolute top-5 left-0 right-0 h-px bg-[#0B1220]/10">
             <motion.div style={{ scaleX: lineScale }} className="h-full bg-sky origin-left" />
+          </div>
+          <div className="md:hidden absolute left-5 top-2 bottom-2 w-px bg-[#0B1220]/10">
+            <motion.div style={{ scaleY: lineScale }} className="w-full h-full bg-sky origin-top" />
           </div>
 
           {processSteps.map((step, i) => (
             <Reveal key={step.id} delay={i * 0.12}>
               <div className="relative">
-                <div className="w-10 h-10 rounded-full bg-[#0B1220] text-sky font-mono text-sm grid place-items-center relative z-10">
-                  {step.id}
+                <div className="flex items-start gap-4 md:block">
+                  <div className="w-10 h-10 rounded-full bg-[#0B1220] text-sky font-mono text-sm grid place-items-center relative z-10 shrink-0">
+                    {step.id}
+                  </div>
+                  <Icon step={i} className="step-visual block md:mt-6" boxed={false} />
                 </div>
-                <Icon step={i} className="step-visual block mt-6" boxed={false} />
-                <h3 className="mt-2 font-display font-bold text-xl text-[#0B1220]">{step.title}</h3>
-                <p className="mt-3 text-sm text-[#0B1220]/60 leading-relaxed">{step.desc}</p>
+                <h3 className="mt-6 md:mt-2 pl-9 md:pl-0 font-display font-bold text-xl text-[#0B1220]">{step.title}</h3>
+                <p className="mt-3 pl-9 md:pl-0 text-sm text-[#0B1220]/60 leading-relaxed">{step.desc}</p>
               </div>
             </Reveal>
           ))}

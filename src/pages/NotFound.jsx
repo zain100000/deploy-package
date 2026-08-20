@@ -16,7 +16,7 @@ export default function NotFound() {
           <Link to="/" className="px-7 py-3.5 rounded-full bg-sky text-ink font-medium hover:bg-skysoft transition-colors">
             Back to Home
           </Link>
-          <Link to="/services" className="px-7 py-3.5 rounded-full border hairline text-white hover:border-sky hover:text-sky transition-colors">
+          <Link to="/services" className="px-7 py-3.5 rounded-full border hairline text-fg hover:border-sky hover:text-sky transition-colors">
             View Services
           </Link>
         </div>

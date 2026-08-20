@@ -89,7 +89,7 @@ export default function ServicesPage() {
             <Reveal delay={0.15}>
               <Link
                 to="/contact"
-                className="inline-block mt-8 px-7 py-3.5 rounded-full border hairline text-white hover:border-sky hover:text-sky transition-colors"
+                className="inline-block mt-8 px-7 py-3.5 rounded-full border hairline text-fg hover:border-sky hover:text-sky transition-colors"
               >
                 Ask about a contract
               </Link>

@@ -37,7 +37,7 @@ export default function WhyUsPage() {
                   </h2>
                 </div>
                 <div className="md:col-span-8">
-                  <p className="text-lg text-white/85 leading-relaxed">{p.desc}</p>
+                  <p className="text-lg text-fg/85 leading-relaxed">{p.desc}</p>
                   <p className="mt-4 text-muted leading-relaxed">{p.detail}</p>
                 </div>
               </div>
@@ -70,7 +70,7 @@ export default function WhyUsPage() {
                     <span className="bar"><i style={{ width: `${28 + i * 4}%` }} /></span>
                   </div>
                   <div className="p-5 border-l hairline bg-sky/[0.03]">
-                    <p className="text-sm text-white/90 leading-relaxed">{b}</p>
+                    <p className="text-sm text-fg/90 leading-relaxed">{b}</p>
                     <span className="bar"><i style={{ width: `${88 + i * 2}%` }} /></span>
                   </div>
                 </div>

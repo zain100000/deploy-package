@@ -4,12 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: '#070B14',
-        panel: '#0D1424',
+        ink: 'rgb(var(--ink) / <alpha-value>)',
+        panel: 'rgb(var(--panel) / <alpha-value>)',
+        fg: 'rgb(var(--fg) / <alpha-value>)',
+        muted: 'rgb(var(--muted) / <alpha-value>)',
         sky: '#3EB8F0',
         skysoft: '#6ED0FF',
         paper: '#F3F5F8',
-        muted: '#8B94A7',
       },
       fontFamily: {
         display: ['Archivo', 'sans-serif'],

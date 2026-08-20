@@ -19,7 +19,7 @@ export default function Hero() {
       <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[500px] rounded-full bg-sky/10 blur-[140px] pointer-events-none" />
 
       {/* 3D scene */}
-      <motion.div style={{ y: sceneY }} className="absolute inset-y-0 right-0 w-full lg:w-[55%] opacity-70 lg:opacity-100">
+      <motion.div style={{ y: sceneY }} className="hidden lg:block absolute inset-y-0 right-0 lg:w-[55%]">
         <Suspense fallback={null}>
           <Hero3D />
         </Suspense>
@@ -78,7 +78,7 @@ export default function Hero() {
           </Link>
           <Link
             to="/services"
-            className="px-7 py-3.5 rounded-full border hairline text-white hover:border-sky hover:text-sky transition-colors"
+            className="px-7 py-3.5 rounded-full border hairline text-fg hover:border-sky hover:text-sky transition-colors"
           >
             View Services
           </Link>

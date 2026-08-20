@@ -58,7 +58,7 @@ export default function Footer() {
             <ul className="space-y-3.5">
               {services.map(([label, to]) => (
                 <li key={to}>
-                  <Link to={to} className="text-sm text-white/80 hover:text-sky transition-colors">
+                  <Link to={to} className="text-sm text-fg/80 hover:text-sky transition-colors">
                     {label}
                   </Link>
                 </li>
@@ -75,7 +75,7 @@ export default function Footer() {
             <ul className="space-y-3.5">
               {pages.map(([label, to]) => (
                 <li key={to}>
-                  <Link to={to} className="text-sm text-white/80 hover:text-sky transition-colors">
+                  <Link to={to} className="text-sm text-fg/80 hover:text-sky transition-colors">
                     {label}
                   </Link>
                 </li>
@@ -87,17 +87,17 @@ export default function Footer() {
           <div>
             <h4 className="font-display font-bold text-lg mb-5">Contact Details</h4>
             <ul className="space-y-4">
-              <li className="flex gap-3 text-sm text-white/80 leading-relaxed">
+              <li className="flex gap-3 text-sm text-fg/80 leading-relaxed">
                 <span className="shrink-0 w-7 h-7 rounded-lg bg-sky/10 border border-sky/25 grid place-items-center text-sky">◎</span>
                 Tamani Arts Building, Office 955, Business Bay, Dubai UAE
               </li>
               <li className="flex gap-3 text-sm">
                 <span className="shrink-0 w-7 h-7 rounded-lg bg-sky/10 border border-sky/25 grid place-items-center text-sky">✆</span>
-                <a href="tel:+97145773461" className="text-white/80 hover:text-sky transition-colors">+971 (04) 577 3461</a>
+                <a href="tel:+97145773461" className="text-fg/80 hover:text-sky transition-colors">+971 (04) 577 3461</a>
               </li>
               <li className="flex gap-3 text-sm">
                 <span className="shrink-0 w-7 h-7 rounded-lg bg-sky/10 border border-sky/25 grid place-items-center text-sky">✉</span>
-                <a href="mailto:info@medskytech.com" className="text-white/80 hover:text-sky transition-colors">info@medskytech.com</a>
+                <a href="mailto:info@medskytech.com" className="text-fg/80 hover:text-sky transition-colors">info@medskytech.com</a>
               </li>
             </ul>
             <a
@@ -118,7 +118,7 @@ export default function Footer() {
           <p className="text-xs text-muted font-mono">
             © {new Date().getFullYear()} Medskytech · Medsky Technical Services LLC, Dubai
           </p>
-          <p className="text-xs text-white/40 font-mono">Powered by Medskytech</p>
+          <p className="text-xs text-fg/40 font-mono">Powered by Medskytech</p>
         </div>
       </div>
     </footer>

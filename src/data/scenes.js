@@ -1,20 +1,24 @@
+import gallery1 from '../assets/gallery/1.webp'
+import gallery2 from '../assets/gallery/2.webp'
+import gallery3 from '../assets/gallery/3.webp'
+import gallery4 from '../assets/gallery/4.webp'
+import gallery5 from '../assets/gallery/5.webp'
+import gallery6 from '../assets/gallery/6.webp'
+
 /* ================= WORK SCENES =================
    Animated line-art scenes of technicians on site.
    TO USE REAL PHOTOS: add the URL to PHOTOS below, keyed by service slug.
    Any slug with a photo renders an <img> instead of the illustration.
-   e.g. PHOTOS["electrical-services"]="/img/team-electrical.jpg"
 ================================================= */
-/* Real client project photos, served from /public/img.
-   Each slug maps to a real photo; the animated illustration stays as fallback. */
 export const PHOTOS={
-  "air-conditioning-ventilation": "/img/team-inspection.jpg",
+  "air-conditioning-ventilation": gallery1,
+  "electrical-services":          gallery2,
+  "plumbing-sanitary-works":      gallery3,
+  "floor-wall-tiling":            gallery4,
+  "ceiling-partition-works":      gallery5,
+  "aluminum-glass-works":         gallery6,
   "electromechanical-services":   "/img/team-electromech.jpg",
-  "plumbing-sanitary-works":      "/img/bath-after.jpg",
-  "electrical-services":          "/img/team-electromech.jpg",
-  "ceiling-partition-works":      "/img/interior-after.jpg",
   "carpentry-flooring":           "/img/interior-after.jpg",
-  "floor-wall-tiling":            "/img/bath-after.jpg",
-  "aluminum-glass-works":         "/img/villa-after.jpg"
 }
 
 export const SCENES={

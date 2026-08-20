@@ -28,11 +28,11 @@ export default function ContactPage() {
               <div className="h-full rounded-2xl border hairline bg-panel/50 p-7">
                 <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted">{label}</p>
                 {href ? (
-                  <a href={href} className="mt-4 block text-white hover:text-sky transition-colors leading-relaxed">
+                  <a href={href} className="mt-4 block text-fg hover:text-sky transition-colors leading-relaxed">
                     {value}
                   </a>
                 ) : (
-                  <p className="mt-4 text-white leading-relaxed">{value}</p>
+                  <p className="mt-4 text-fg leading-relaxed">{value}</p>
                 )}
               </div>
             </Reveal>

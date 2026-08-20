@@ -23,7 +23,7 @@ export default function WhyUs() {
           </div>
         </div>
         <div className="lg:col-span-8">
-          <div className="divide-y divide-white/[0.08]">
+          <div className="divide-y divide-fg/[0.08]">
             {whyPoints.map((p, i) => (
               <Reveal key={p.title} delay={i * 0.08}>
                 <div className="py-8 grid md:grid-cols-12 gap-4">

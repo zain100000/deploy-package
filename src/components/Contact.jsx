@@ -3,7 +3,7 @@ import Reveal from './Reveal'
 import { services } from '../data/services'
 
 const inputClass =
-  'w-full bg-panel/60 border hairline rounded-xl px-4 py-3.5 text-sm text-white placeholder:text-muted/60 focus:outline-none focus:border-sky/60 transition-colors'
+  'w-full bg-panel/60 border hairline rounded-xl px-4 py-3.5 text-sm text-fg placeholder:text-muted/60 focus:outline-none focus:border-sky/60 transition-colors'
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', phone: '', email: '', service: '', message: '' })
@@ -45,10 +45,10 @@ export default function Contact() {
 
           <Reveal delay={0.15}>
             <div className="mt-12 space-y-5 font-mono text-sm">
-              <a href="tel:+97145773461" className="block text-white hover:text-sky transition-colors">
+              <a href="tel:+97145773461" className="block text-fg hover:text-sky transition-colors">
                 +971 (04) 577 3461
               </a>
-              <a href="mailto:info@medskytech.com" className="block text-white hover:text-sky transition-colors">
+              <a href="mailto:info@medskytech.com" className="block text-fg hover:text-sky transition-colors">
                 info@medskytech.com
               </a>
               <p className="text-muted">Tamani Arts Building, Office 955, Business Bay, Dubai</p>

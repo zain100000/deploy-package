@@ -20,7 +20,7 @@ export default function About() {
             </h2>
           </Reveal>
         </div>
-        <div className="lg:col-span-7 lg:pt-14">
+        <div className="lg:col-span-7 lg:pt-8">
           <Reveal delay={0.1}>
             <p className="text-lg text-muted leading-relaxed max-w-2xl">
               Medskytech is a Dubai-based technical services company covering the full
