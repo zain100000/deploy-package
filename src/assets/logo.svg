@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 40" fill="none">
+  <rect width="34" height="34" y="3" rx="8" fill="#0D1424" stroke="#3EB8F0" stroke-width="1.5"/>
+  <path d="M9 28V13l6 8 4.5-8 4.5 8 6-8v15" stroke="#3EB8F0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="44" y="27" font-family="Archivo, sans-serif" font-size="19" font-weight="800" letter-spacing="0.5" fill="#EDF1F7">MEDSKY<tspan fill="#3EB8F0">TECH</tspan></text>
+</svg>
