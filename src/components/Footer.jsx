@@ -118,7 +118,7 @@ export default function Footer() {
           <p className="text-xs text-muted font-mono">
             © {new Date().getFullYear()} Medskytech · Medsky Technical Services LLC, Dubai
           </p>
-          <p className="text-xs text-fg/40 font-mono">Powered by Medskytech</p>
+          <p className="text-xs text-fg/40 font-mono">Powered by <Link to="https://ranamuzamil.com" target="_blank" rel="noopener noreferrer" className="text-sky hover:text-sky/80 transition-colors">ranamuzamil.com</Link></p>
         </div>
       </div>
     </footer>
